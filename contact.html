@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Контакти — ВАШ СЕРВІС</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- EmailJS SDK (optional) -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">ВАШ СЕРВІС</a>
+      <nav class="nav">
+        <a href="services.html">Послуги</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Контакти</h1>
+    <div class="grid cols-2 contact-grid">
+      <div>
+        <h3>Зв'язок</h3>
+        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Телефон: <a href="tel:+380671234567">+38 (067) 123-45-67</a></p>
+        <h4>Графік</h4>
+        <p>Пн–Пт 09:00–18:00</p>
+      </div>
+      <div>
+        <h3>Напишіть нам</h3>
+        <form id="contact-form" class="form">
+          <label>Ім'я<input name="name" required/></label>
+          <label>Email<input name="email" type="email" required/></label>
+          <label>Повідомлення<textarea name="message" rows="4" required></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+          </div>
+          <div id="contact-ok" class="modal-ok" hidden>Дякуємо! Повідомлення відправлено.</div>
+        </form>
+      </div>
+    </div>
+
+    <h3>Ми на мапі</h3>
+    <div class="map-wrap">
+      <!-- Вставте свій iframe Google Maps тут -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." loading="lazy"></iframe>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container copyright">© <span id="year4"></span> ВАШ СЕРВІС</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

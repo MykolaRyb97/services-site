@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Послуги — ВАШ СЕРВІС</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">ВАШ СЕРВІС</a>
+      <nav class="nav">
+        <a href="services.html">Послуги</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+        <button id="btn-order" class="btn btn-ghost">Замовити</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Наші послуги</h1>
+    <div class="grid cols-3" id="services-grid">
+      <!-- cards by JS -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container copyright">© <span id="year2"></span> ВАШ СЕРВІС</div>
+  </footer>
+
+  <!-- Modal included once -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close>×</button>
+      <h3 id="modal-title">Замовити послугу</h3>
+      <form id="order-form" class="form">
+        <label>Послуга
+          <select name="service" id="order-service"></select>
+        </label>
+        <label>Ім'я<input name="name" required/></label>
+        <label>Телефон<input name="phone" required/></label>
+        <label>Email<input name="email" type="email" required/></label>
+        <label>Повідомлення<textarea name="message" rows="3"></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Надіслати заявку</button>
+          <button type="button" class="btn btn-ghost" data-close>Скасувати</button>
+        </div>
+      </form>
+      <div id="order-ok" class="modal-ok" hidden>Дякуємо! Ми зв'яжемось найближчим часом.</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
