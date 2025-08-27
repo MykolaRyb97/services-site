@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Нумерологія</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Нуморелогія - сенс життя</a>
+      <nav class="nav">
+        <a href="services.html">Послуги</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+        <button id="btn-signup" class="btn btn-ghost">Замовити</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Професійні послуги для вашого бізнесу</h1>
+          <p>Ми допомагаємо досягати результатів: маркетинг, дизайн, розробка, консультації — швидко і якісно.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="services.html">Переглянути послуги</a>
+            <button id="btn-hero-order" class="btn btn-outline">Отримати консультацію</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="img/hero-illustration.svg" alt="hero illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <h2>Чому обирають нас</h2>
+      <div class="grid cols-3">
+        <div class="card feature">
+          <img src="img/icon-speed.svg" alt="speed" class="icon" />
+          <h3>Швидко</h3>
+          <p>Реальні результати за короткий термін — ми цінуємо ваш час.</p>
+        </div>
+        <div class="card feature">
+          <img src="img/icon-quality.svg" alt="quality" class="icon" />
+          <h3>Якість</h3>
+          <p>Працюємо за перевіреними стандартами та даємо гарантію.</p>
+        </div>
+        <div class="card feature">
+          <img src="img/icon-support.svg" alt="support" class="icon" />
+          <h3>Підтримка</h3>
+          <p>Підтримка після завершення проекту — ми поруч.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container preview-services">
+      <h2>Популярні послуги</h2>
+      <div class="grid cols-3" id="services-list">
+        <!-- services populated by JS -->
+      </div>
+      <div class="center"><a class="btn btn-primary" href="services.html">Усі послуги</a></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div>
+        <h4>ВАШ СЕРВІС</h4>
+        <p>Професійні послуги для вашого бізнесу. Звертайтесь: <a href="mailto:info@example.com">info@example.com</a></p>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Підписка</h4>
+        <p>Отримуйте корисні поради — підпишіться на розсилку.</p>
+        <form id="subscribe-form" class="subscribe-form">
+          <input type="email" name="email" placeholder="Ваш email" required />
+          <button class="btn btn-small">Підписатися</button>
+        </form>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> ВАШ СЕРВІС</div>
+  </footer>
+
+  <!-- Modal: Order form -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close>×</button>
+      <h3 id="modal-title">Замовити послугу</h3>
+      <form id="order-form" class="form">
+        <label>Послуга
+          <select name="service" id="order-service"></select>
+        </label>
+        <label>Ім'я<input name="name" required/></label>
+        <label>Телефон<input name="phone" required/></label>
+        <label>Email<input name="email" type="email" required/></label>
+        <label>Повідомлення<textarea name="message" rows="3"></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Надіслати заявку</button>
+          <button type="button" class="btn btn-ghost" data-close>Скасувати</button>
+        </div>
+      </form>
+      <div id="order-ok" class="modal-ok" hidden>Дякуємо! Ми зв'яжемось найближчим часом.</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
